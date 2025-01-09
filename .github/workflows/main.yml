@@ -1,0 +1,13 @@
+name: Ejercicio2
+
+on: push
+
+jobs:
+  test-codigo:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: advanced-security/python-lint-code-scanning-action@v1
+	with:
+          linter: pylint
